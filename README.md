@@ -5,13 +5,13 @@ Set a custom static or dynamic title for Yazi's header bar.
 ## Installation
 
 ```sh
-ya pkg add elweday1/custom-title
+ya pkg add elweday1/custom-title.yazi
 ```
 
 Or manually:
 
 ```sh
-git clone https://github.com/<your-username>/custom-title.yazi.git ~/.config/yazi/plugins/custom-title.yazi
+git clone https://github.com/elweday1/custom-title.yazi.git ~/.config/yazi/plugins/custom-title.yazi
 ```
 
 ## Usage
