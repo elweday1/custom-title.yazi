@@ -5,7 +5,7 @@ Set a custom static or dynamic title for Yazi's header bar.
 ## Installation
 
 ```sh
-ya pkg add elweday1/custom-title.yazi
+ya pkg add elweday1/custom-title
 ```
 
 Or manually:
