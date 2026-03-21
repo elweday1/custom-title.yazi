@@ -36,6 +36,25 @@ Supports `$VAR` or `${VAR}` syntax:
 require("custom-title"):setup({ title = "$USER @ ${HOSTNAME}" })
 ```
 
+### Current Directory
+
+Use `%d` to insert the current directory:
+
+```lua
+require("custom-title"):setup({ title = "%d" })
+```
+
+### Alignment
+
+Control text alignment with the `align` option (`"left"`, `"center"`, `"right"`):
+
+```lua
+require("custom-title"):setup({
+  title = "My Title",
+  align = "left",
+})
+```
+
 ### Dynamic Title
 
 Pass a function that's called on every redraw:
@@ -48,22 +67,12 @@ require("custom-title"):setup({
 })
 ```
 
-Combine with environment variables:
-
-```lua
-require("custom-title"):setup({
-  title = function()
-    local user = os.getenv("USER") or "user"
-    return user .. " | " .. os.date("%H:%M")
-  end
-})
-```
-
 ## Options
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `title` | `string \| function` | `"Yazi"` | The title to display. Can be a string (with env var expansion) or a function returning a string. |
+| `title` | `string \| function` | `"Yazi"` | The title to display. Supports `%d` for current directory, `$VAR` for env vars, or a function. |
+| `align` | `string` | `"center"` | Text alignment: `"left"`, `"center"`, or `"right"`. |
 
 ## License
 
